@@ -6,7 +6,7 @@ import java.lang.Comparable;
  */
 
 public class QuickSort_obj {
-    public QuickSort() {
+    public QuickSort_obj() {
     }
 
     public Comparable[] quickSort (Comparable[] list) {

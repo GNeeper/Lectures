@@ -8,7 +8,7 @@ public class BinarySearch {
     public static void main(String[] args) {
         String[] testCase = {"9", "0", "125", "1285", "12411", "1231115"};
         args =  testCase;
-        QuickSort qs = new QuickSort();
+        QuickSort_obj qs = new QuickSort_obj();
         if (args.length == 0) {
             System.out.println("Empty list.");
             System.exit(1);
