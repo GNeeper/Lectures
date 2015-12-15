@@ -21,19 +21,13 @@ public class QuickSort {
 
     public static Comparable[] quickSort (Comparable[] list) {
         int l = list.length;
-        if (l < 3) {
-            if (l == 2) {
-                if (list[0].compareTo(list[1]) > 0)
-                    return list;
-                return swap(list, 0, 1);
-            }
+        if (l < 2)
             return list;
-        }
         int pivot = l-1;
         for (int i = 0; i < pivot; i++) {
             if (list[i].compareTo(list[pivot]) > 0) {
-                list = swap(list, pivot, i);
-                list = swap(list, --pivot, i--);
+                swap(list, pivot, i);
+                swap(list, --pivot, i--);
             }
         }
         return divideQuickSort(list, pivot);
@@ -51,11 +45,10 @@ public class QuickSort {
         return list;
     }
 
-    public static Comparable[] swap(Comparable[] array, int a, int b) {
+    public static void swap(Comparable[] array, int a, int b) {
         Comparable temp = array[b];
         array[b] = array[a];
         array[a] = temp;
-        return array;
     }
 
     public static void printList(Comparable[] list) {
