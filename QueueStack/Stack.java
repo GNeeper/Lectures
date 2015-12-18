@@ -23,10 +23,11 @@ public class Stack<E> implements Queue<E> {
     }
     public E poll() {
         if (size == 1) {
-            head = null;
-            tail = null;
-            return null;
+            head.next = null;
+            tail.prev = null;
         }
+        if (size == 0)
+            return null;
         E temp = head.data;
         head = head.next;
         size--;
@@ -34,10 +35,11 @@ public class Stack<E> implements Queue<E> {
     }
     public E pop() {
         if (size == 1) {
-            head = null;
-            tail = null;
-            return null;
+            head.next = null;
+            tail.prev = null;
         }
+        if (size == 0)
+            return null;
         E temp = tail.data;
         tail = tail.prev;
         size--;
@@ -49,9 +51,16 @@ public class Stack<E> implements Queue<E> {
         return null;
     }
     public E peekTail() {
-        if (tail != null)
+        if (tail != null && tail.prev != null)
             return tail.data;
         return null;
+    }
+    public void empty() {
+        while (size > 0)
+            poll();
+    }
+    public int getSize() {
+        return size;
     }
 }
 
