@@ -3,6 +3,7 @@ package QueueStack;
 /**
  * Created by Garrett on 12/17/2015.
  */
+
 public class QueueStack<E> extends Queue<E> {
     public E pop() {                                 //Stack pop; head removed;
         E temp = tail.data;

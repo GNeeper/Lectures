@@ -3,6 +3,10 @@ package QueueStack;
 /**
  * Created by Garrett on 12/16/2015.
  */
+
+//MADE JUST BECAUSE
+
+
 public class Stack<E> {
     public Node<E> head;
 

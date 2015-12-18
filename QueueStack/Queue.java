@@ -3,6 +3,7 @@ package QueueStack;
 /**
  * Created by Garrett on 12/16/2015.
  */
+
 public class Queue<E> {
     public Node<E> head, tail;
     protected int size = 0;

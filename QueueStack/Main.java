@@ -6,10 +6,12 @@ package QueueStack;
 
 public class Main {
     public static void main(String[] args) {
-        QueueStack<Integer> qs = new QueueStack();
-        qs.push(5); qs.push(6); qs.push(7);
-        qs.empty();
-        System.out.println(qs.peekHead());
-        System.out.println(qs.peekTail());
+        QueueStack<Integer> int_QS = new QueueStack();
+        int_QS.push(5); int_QS.push(6); int_QS.push(7); int_QS.push(125);
+        System.out.println(int_QS.peekHead());
+        System.out.println(int_QS.peekTail());
+
+        int_QS.empty();
+        System.out.println(int_QS.getSize());
     }
 }
