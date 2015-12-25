@@ -1,0 +1,14 @@
+package QueueStack;
+
+public class PolishCalc {
+	public static void main(String[] args) {
+		String test = "+4+";
+		calcPol(test);
+	}
+	public static int calcPol(String n) {
+		int conv = n.charAt(0);
+		if (conv > 47 && conv < 58)
+			System.out.println("int");
+		return 0;
+	}
+}
