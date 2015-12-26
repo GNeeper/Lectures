@@ -1,0 +1,36 @@
+package QueueStack;
+
+public class PolishCalc {
+	static Stack<Integer> stack = new Stack();
+	
+	public static void main(String[] args) {
+		String test = "94x43-";
+		System.out.println(calcPol(test));
+	}
+	public static int calcPol(String n) {
+		int conv = n.charAt(0);
+		if (conv > 47 && conv < 58) {
+			stack.push(conv-48);
+			return calcPol(n.substring(1, n.length()));
+		}
+		int temp = stack.pop();
+		switch(n.charAt(0)) {
+			case '+': 
+				return stack.pop() + temp;
+			case '-':
+				return stack.pop() - temp;
+			case '*':
+				return stack.pop() * temp;
+			case 'x':
+				return stack.pop() / temp;
+			case '/':
+				return stack.pop() / temp;
+			case '%':
+				return stack.pop() % temp;
+			default:
+				System.out.println("Invalid input.");
+				System.exit(1);
+		}
+		return 0;
+	}
+}
